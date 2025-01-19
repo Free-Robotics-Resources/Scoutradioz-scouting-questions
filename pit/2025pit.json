@@ -181,7 +181,7 @@
     {
         "type": "checkbox",
         "label": "Auto Runs On Oponent Processer Side?",
-        "id": "autoFiendSourceRun"
+        "id": "autoOpponentSourceRun"
     },
     {
         "type": "textblock",

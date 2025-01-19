@@ -1,0 +1,201 @@
+[
+    {
+        "type": "h2",
+        "label": "Drive Base",
+        "id": "driveBase"
+    },
+    {
+        "type": "spacer"
+    },
+    {
+        "type": "multiselect",
+        "label": "Drive base type",
+        "options": [
+            "Swerve",
+            "Tank",
+            "Mecanum",
+            "Other"
+        ],
+        "id": "driveBaseType"
+    },
+    {
+        "type": "textblock",
+        "label": "Other Drive base",
+        "id": "driveBaseTypes"
+    },
+    {
+        "type": "slider",
+        "label": "Robot Length w/Bumpers (in)",
+        "id": "driveBaseLength",
+        "options": {
+            "min": 20,
+            "max": 40,
+            "step": 1
+        }
+    },
+    {
+        "type": "slider",
+        "label": "Robot Width w/Bumpers (in)",
+        "id": "driveBaseWidth",
+        "options": {
+            "min": 20,
+            "max": 40,
+            "step": 1
+        }
+    },
+    {
+        "type": "h2",
+        "label": "Scoring",
+        "id": "scoring"
+    },
+    {
+        "type": "spacer"
+    },
+    {
+        "type": "checkbox",
+        "label": "Coral from the Source?",
+        "id": "pickUpSource"
+    },
+    {
+        "type": "checkbox",
+        "label": "Coral from the Ground?",
+        "id": "pickUpGround"
+    },
+    {
+        "type": "checkbox",
+        "label": "L1",
+        "id": "L1"
+    },
+    {
+        "type": "checkbox",
+        "label": "L2",
+        "id": "L2"
+    },
+    {
+        "type": "checkbox",
+        "label": "L3",
+        "id": "L3"
+    },
+    {
+        "type": "checkbox",
+        "label": "L4",
+        "id": "L4"
+    },
+    {
+        "type": "1st Preferred Level",
+        "label": "Drive base type",
+        "options": [
+            "L4",
+            "L3",
+            "L2",
+            "L1",
+            "None"
+        ],
+        "id": "1stPreference"
+    },
+    {
+        "type": "2nd Preferred Level",
+        "label": "Drive base type",
+        "options": [
+            "L4",
+            "L3",
+            "L2",
+            "L1",
+            "None"
+        ],
+        "id": "2ndPreference"
+    },
+    {
+        "type": "3rd Preferred Level",
+        "label": "Drive base type",
+        "options": [
+            "L4",
+            "L3",
+            "L2",
+            "L1",
+            "None"
+        ],
+        "id": "3rdPreference"
+    },
+    {
+        "type": "checkbox",
+        "label": "Remove Algae from Reef?",
+        "id": "AlgaeReef"
+    },
+    {
+        "type": "checkbox",
+        "label": "Pickup Algae?",
+        "id": "AlgaeIntake"
+    },
+    {
+        "type": "checkbox",
+        "label": "Score Processer?",
+        "id": "AlgaeProcesser"
+    },
+    {
+        "type": "checkbox",
+        "label": "Robot Score Net?",
+        "id": "AlgaeNet"
+    },
+    {
+        "type": "h3",
+        "label": "Cage",
+        "id": "Cage"
+    },
+    {
+        "type": "spacer"
+    },
+    {
+        "type": "checkbox",
+        "label": "Shallow Climb?",
+        "id": "climbShallow"
+    },
+    {
+        "type": "checkbox",
+        "label": "Deep Climb?",
+        "id": "climbDeep"
+    },
+    {
+        "type": "h2",
+        "label": "Auto",
+        "id": "AutoTitlte"
+    },
+    {
+        "type": "spacer"
+    },
+    {
+        "type": "Checkbox",
+        "label": "Autonomous Runs",
+        "id": "autoRuns"
+    },
+    {
+        "type": "checkbox",
+        "label": "Auto Runs On Friendly Processer Side?",
+        "id": "autoFriendSourceRun"
+    },
+    {
+        "type": "checkbox",
+        "label": "Auto Runs In Middle?",
+        "id": "autoMiddleRun"
+    },
+    {
+        "type": "checkbox",
+        "label": "Auto Runs On Oponent Processer Side?",
+        "id": "autoFiendSourceRun"
+    },
+    {
+        "type": "textblock",
+        "label": "Auto Run Plays (List what they can do in auto)",
+        "id": "autoRunNotes"
+    },
+    {
+        "type": "h2",
+        "label": "Comment Section",
+        "id": "lblcomment"
+    },
+    {
+        "type": "textblock",
+        "label": "Comments",
+        "id": "comment"
+    }
+]

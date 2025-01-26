@@ -154,7 +154,7 @@
       "id": "General"
     },
     {
-      "type": "timeslider",
+      "type": "slider",
       "label": "Defense Rating?",
       "id": "DefenseQuality",
       "options": {

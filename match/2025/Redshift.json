@@ -1,0 +1,592 @@
+[
+    {
+      "type": "h2",
+      "label": "Pre-Match Info",
+      "id": "Prematch"
+    },
+    {
+      "type": "multiselect",
+      "label": "Starting Position",
+      "options": [
+        "Not There",
+        "Processor Side",
+        "Middle",
+        "Other Side"
+      ],
+      "id": "preMatchStart"
+    },
+    {
+      "type": "spacer"
+    },
+    {
+      "type": "h2",
+      "label": "Autonomous",
+      "id": "Auto"
+    },
+    {
+      "type": "h3",
+      "label": "Auto Coral",
+      "id": "AutoCoral"
+    },
+    {
+      "type": "counter",
+      "label": "Level 1",
+      "id": "autoL1"
+    },
+    {
+      "type": "counter",
+      "label": "Level 2",
+      "id": "autoL2"
+    },
+    {
+      "type": "counter",
+      "label": "Level 3",
+      "id": "autoL3"
+    },
+    {
+      "type": "counter",
+      "label": "Level 4",
+      "id": "autoL4"
+    },
+    {
+      "type": "h3",
+      "label": "Auto Algae",
+      "id": "AutoAlgae"
+    },
+    {
+      "type": "counter",
+      "label": "Processor",
+      "id": "autoProcessor"
+    },
+    {
+      "type": "counter",
+      "label": "Net",
+      "id": "autoNet"
+    },
+    {
+      "type": "spacer"
+    },
+    {
+      "type": "h2",
+      "label": "Teleop",
+      "id": "Teleop"
+    },
+    {
+      "type": "h3",
+      "label": "Teleop Coral",
+      "id": "TeleopCoral"
+    },
+    {
+      "type": "checkbox",
+      "label": "Did they pick up Coral from the Station?",
+      "id": "teleopSource"
+    },
+    {
+      "type": "checkbox",
+      "label": "Did they pick up Coral off the ground?",
+      "id": "teleopFloor"
+    },
+    {
+      "type": "counter",
+      "label": "Level 1",
+      "id": "teleopL1"
+    },
+    {
+      "type": "counter",
+      "label": "Level 2",
+      "id": "teleopL2"
+    },
+    {
+      "type": "counter",
+      "label": "Level 3",
+      "id": "teleopL3"
+    },
+    {
+      "type": "counter",
+      "label": "Level 4",
+      "id": "teleopL4"
+    },
+    {
+      "type": "h3",
+      "label": "Teleop Algae",
+      "id": "TeleopAlgae"
+    },
+    {
+      "type": "checkbox",
+      "label": "Did they knock off Algae from the Reef?",
+      "id": "teleopKnockAlgae"
+    },
+    {
+      "type": "counter",
+      "label": "Algae Scored in Processor",
+      "id": "teleopProcessor"
+    },
+    {
+      "type": "counter",
+      "label": "Total Robot Algae points",
+      "id": "teleopNet"
+    },
+    {
+      "type": "spacer"
+    },
+    {
+      "type": "h2",
+      "label": "Endgame",
+      "id": "Endgame"
+    },
+    {
+      "type": "multiselect",
+      "label": "Stage Status of robot at end of match:",
+      "options": [
+        "Not Parked",
+        "Parked",
+        "Shallow Cage",
+        "Deep Cage"
+      ],
+      "id": "endgameBarge"
+    },
+    {
+      "type": "spacer"
+    },
+    {
+      "type": "h2",
+      "label": "General",
+      "id": "General"
+    },
+    {
+      "type": "checkbox",
+      "label": "Did they play defense?",
+      "id": "playedDefense"
+    },
+    {
+      "type": "textblock",
+      "label": "Comments:",
+      "id": "otherNotes"
+    },
+    {
+      "type": "derived",
+      "operations": [
+        {
+          "operator": "multiply",
+          "operands": [
+            "autoL1",
+            3
+          ],
+          "as": "autoCL1"
+        },
+        {
+          "operator": "multiply",
+          "operands": [
+            "autoL2",
+            4
+          ],
+          "as": "autoCL2"
+        },
+        {
+          "operator": "multiply",
+          "operands": [
+            "autoL3",
+            6
+          ],
+          "as": "autoCL3"
+        },
+        {
+          "operator": "multiply",
+          "operands": [
+            "autoL4",
+            7
+          ],
+          "as": "autoCL4"
+        },
+        {
+          "operator": "multiply",
+          "operands": [
+            "autoProcessor",
+            6
+          ],
+          "as": "autoAProc"
+        },
+        {
+          "operator": "multiply",
+          "operands": [
+            "autoNet",
+            4
+          ],
+          "as": "autoANet"
+        },
+        {
+          "operator": "multiply",
+          "operands": [
+            "teleopL1",
+            2
+          ],
+          "as": "teleopCL1"
+        },
+        {
+          "operator": "multiply",
+          "operands": [
+            "teleopL2",
+            3
+          ],
+          "as": "teleopCL2"
+        },
+        {
+          "operator": "multiply",
+          "operands": [
+            "teleopL3",
+            4
+          ],
+          "as": "teleopCL3"
+        },
+        {
+          "operator": "multiply",
+          "operands": [
+            "teleopL4",
+            5
+          ],
+          "as": "teleopCL4"
+        },
+        {
+          "operator": "multiply",
+          "operands": [
+            "teleopProcessor",
+            6
+          ],
+          "as": "teleopAProc"
+        },
+        {
+          "operator": "multiply",
+          "operands": [
+            "teleopNet",
+            4
+          ],
+          "as": "teleopANet"
+        },
+        {
+          "operator": "multiselect",
+          "id": "endgameBarge",
+          "quantifiers": {
+            "Not Parked": 0,
+            "Parked": 2,
+            "Shallow Cage": 6,
+            "Deep Cage": 12
+          },
+          "as": "endgameBa"
+        },
+        {
+          "operator": "sum",
+          "operands": [
+            "$autoCL1",
+            "$autoCL2",
+            "$autoCL3",
+            "$autoCL4",
+            "$autoAProc",
+            "$autoANet",
+            "$teleopCL1",
+            "$teleopCL2",
+            "$teleopCL3",
+            "$teleopCL4",
+            "$teleopAProc",
+            "$teleopANet",
+            "$endgameBa"
+          ]
+        }
+      ],
+      "display_as": "number",
+      "label": "Total contributed points",
+      "id": "contributedPoints"
+    },
+    {
+      "type": "derived",
+      "operations": [
+        {
+          "operator": "multiply",
+          "operands": [
+            "autoL1",
+            3
+          ],
+          "as": "autoCL1"
+        },
+        {
+          "operator": "multiply",
+          "operands": [
+            "autoL2",
+            4
+          ],
+          "as": "autoCL2"
+        },
+        {
+          "operator": "multiply",
+          "operands": [
+            "autoL3",
+            6
+          ],
+          "as": "autoCL3"
+        },
+        {
+          "operator": "multiply",
+          "operands": [
+            "autoL4",
+            7
+          ],
+          "as": "autoCL4"
+        },
+        {
+          "operator": "multiply",
+          "operands": [
+            "autoProcessor",
+            6
+          ],
+          "as": "autoAProc"
+        },
+        {
+          "operator": "multiply",
+          "operands": [
+            "autoNet",
+            4
+          ],
+          "as": "autoANet"
+        },
+        {
+          "operator": "sum",
+          "operands": [
+            "$autoCL1",
+            "$autoCL2",
+            "$autoCL3",
+            "$autoCL4",
+            "$autoAProc",
+            "$autoANet"
+          ]
+        }
+      ],
+      "display_as": "number",
+      "label": "Total Auton points",
+      "id": "AutonPoints"
+    },
+    {
+      "type": "derived",
+      "operations": [
+        {
+          "operator": "multiply",
+          "operands": [
+            "teleopL1",
+            2
+          ],
+          "as": "teleopCL1"
+        },
+        {
+          "operator": "multiply",
+          "operands": [
+            "teleopL2",
+            3
+          ],
+          "as": "teleopCL2"
+        },
+        {
+          "operator": "multiply",
+          "operands": [
+            "teleopL3",
+            4
+          ],
+          "as": "teleopCL3"
+        },
+        {
+          "operator": "multiply",
+          "operands": [
+            "teleopL4",
+            5
+          ],
+          "as": "teleopCL4"
+        },
+        {
+          "operator": "multiply",
+          "operands": [
+            "teleopProcessor",
+            6
+          ],
+          "as": "teleopAProc"
+        },
+        {
+          "operator": "multiply",
+          "operands": [
+            "teleopNet",
+            4
+          ],
+          "as": "teleopANet"
+        },
+        {
+          "operator": "sum",
+          "operands": [
+            "$teleopCL1",
+            "$teleopCL2",
+            "$teleopCL3",
+            "$teleopCL4",
+            "$teleopAProc",
+            "$teleopANet"
+          ]
+        }
+      ],
+      "display_as": "number",
+      "label": "Total Teleop points",
+      "id": "TeleopPoints"
+    },
+    {
+      "type": "derived",
+      "operations": [
+        {
+          "operator": "multiply",
+          "operands": [
+            "autoL1",
+            3
+          ],
+          "as": "autoCL1"
+        },
+        {
+          "operator": "multiply",
+          "operands": [
+            "autoL2",
+            4
+          ],
+          "as": "autoCL2"
+        },
+        {
+          "operator": "multiply",
+          "operands": [
+            "autoL3",
+            6
+          ],
+          "as": "autoCL3"
+        },
+        {
+          "operator": "multiply",
+          "operands": [
+            "autoL4",
+            7
+          ],
+          "as": "autoCL4"
+        },
+        {
+          "operator": "multiply",
+          "operands": [
+            "teleopL1",
+            2
+          ],
+          "as": "teleopCL1"
+        },
+        {
+          "operator": "multiply",
+          "operands": [
+            "teleopL2",
+            3
+          ],
+          "as": "teleopCL2"
+        },
+        {
+          "operator": "multiply",
+          "operands": [
+            "teleopL3",
+            4
+          ],
+          "as": "teleopCL3"
+        },
+        {
+          "operator": "multiply",
+          "operands": [
+            "teleopL4",
+            5
+          ],
+          "as": "teleopCL4"
+        },
+        {
+          "operator": "sum",
+          "operands": [
+            "$autoCL1",
+            "$autoCL2",
+            "$autoCL3",
+            "$autoCL4",
+            "$teleopCL1",
+            "$teleopCL2",
+            "$teleopCL3",
+            "$teleopCL4"
+          ]
+        }
+      ],
+      "display_as": "number",
+      "label": "Total Coral points",
+      "id": "CoralPoints"
+    },
+    {
+      "type": "derived",
+      "operations": [
+        {
+          "operator": "multiply",
+          "operands": [
+            "autoProcessor",
+            6
+          ],
+          "as": "autoAProc"
+        },
+        {
+          "operator": "multiply",
+          "operands": [
+            "autoNet",
+            4
+          ],
+          "as": "autoANet"
+        },
+        {
+          "operator": "multiply",
+          "operands": [
+            "teleopProcessor",
+            6
+          ],
+          "as": "teleopAProc"
+        },
+        {
+          "operator": "multiply",
+          "operands": [
+            "teleopNet",
+            4
+          ],
+          "as": "teleopANet"
+        },
+        {
+          "operator": "sum",
+          "operands": [
+            "$autoAProc",
+            "$autoANet",
+            "$teleopAProc",
+            "$teleopANet"
+          ]
+        }
+      ],
+      "display_as": "number",
+      "label": "Total Robot Algae points",
+      "id": "AlgaePoints"
+    },
+    {
+      "type": "derived",
+      "operations": [
+        {
+          "operator": "multiselect",
+          "id": "endgameBarge",
+          "quantifiers": {
+            "Not Parked": 0,
+            "Parked": 2,
+            "Shallow Cage": 6,
+            "Deep Cage": 12
+          },
+          "as": "endgameBa"
+        },
+        {
+          "operator": "sum",
+          "operands": [
+            "$endgameBa"
+          ]
+        }
+      ],
+      "display_as": "number",
+      "label": "Total Endgame points",
+      "id": "EndgamePoints"
+    }
+  ]

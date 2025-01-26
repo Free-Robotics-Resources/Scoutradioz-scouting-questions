@@ -154,9 +154,14 @@
       "id": "General"
     },
     {
-      "type": "checkbox",
-      "label": "Did they play defense?",
-      "id": "playedDefense"
+      "type": "timeslider",
+      "label": "Defense Rating?",
+      "id": "DefenseQuality",
+      "options": {
+        "min": 0,
+        "max": 5,
+        "step": 1
+      }
     },
     {
       "type": "textblock",

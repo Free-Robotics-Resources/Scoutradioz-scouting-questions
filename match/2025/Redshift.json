@@ -49,6 +49,11 @@
       "id": "autoL4"
     },
     {
+      "type": "counter",
+      "label": "Missed Coral in Auto",
+      "id": "autoMiss"
+    },
+    {
       "type": "h3",
       "label": "Auto Algae",
       "id": "AutoAlgae"
@@ -107,6 +112,11 @@
       "id": "teleopL4"
     },
     {
+      "type": "counter",
+      "label": "Missed Coral in Teleop",
+      "id": "teleopMiss"
+    },
+    {
       "type": "h3",
       "label": "Teleop Algae",
       "id": "TeleopAlgae"
@@ -154,9 +164,14 @@
       "id": "General"
     },
     {
+      "type": "checkbox",
+      "label": "Did they play defense?",
+      "id": "otherDefense"
+    },
+    {
       "type": "slider",
-      "label": "Defense Rating?",
-      "id": "DefenseQuality",
+      "label": "Robot Adaptability Rating?",
+      "id": "otherAdaptability",
       "options": {
         "min": 0,
         "max": 5,
@@ -593,5 +608,20 @@
       "display_as": "number",
       "label": "Total Endgame points",
       "id": "EndgamePoints"
+    },
+    {
+      "type": "derived",
+      "operations": [
+        {
+          "operator": "sum",
+          "operands": [
+            "autoMiss",
+            "teleopMiss"
+          ]
+        }
+      ],
+      "display_as": "number",
+      "label": "Total Missed Coral",
+      "id": "totalMissed"
     }
   ]

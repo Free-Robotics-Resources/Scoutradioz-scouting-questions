@@ -123,7 +123,7 @@
     },
     {
       "type": "counter",
-      "label": "Total Robot Algae points",
+      "label": "Algae ROBOT Scored in Net",
       "id": "teleopNet"
     },
     {

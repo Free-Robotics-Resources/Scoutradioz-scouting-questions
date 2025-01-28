@@ -623,5 +623,65 @@
       "display_as": "number",
       "label": "Total Missed Coral",
       "id": "totalMissed"
+    },
+    {
+      "type": "derived",
+      "operations": [
+        {
+          "operator": "sum",
+          "operands": [
+            "autoL1",
+            "autoL2",
+            "autoL3",
+            "autoL4",
+            "teleopL1",
+            "teleopL2",
+            "teleopL3",
+            "teleopL4"
+          ]
+        }
+      ],
+      "display_as": "number",
+      "label": "Total Coral Scored",
+      "id": "totalCoralScored"
+    },
+    {
+      "type": "derived",
+      "operations": [
+        {
+          "operator": "sum",
+          "operands": [
+            "totalMissed",
+            "totalCoralScored"
+          ],
+          "as": "totalAttempted"
+        },
+        {
+          "operator": "ne",
+          "operands": [
+            "$totalAttempted",
+            0
+          ],
+          "as": "didAttempt"
+        },
+        {
+          "operator": "add",
+          "operands": [
+            "$totalAttempted",
+            "$didAttempt"
+          ],
+          "as": "modifiedAttempted"
+        },
+        {
+          "operator": "divide",
+          "operands": [
+            "totalCoralScored",
+            "$modifiedAttempted"
+          ]
+        }
+      ],
+      "display_as": "number",
+      "label": "Match Weighted Consistency",
+      "id": "RobotConsistency"
     }
   ]

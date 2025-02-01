@@ -1,6 +1,6 @@
 [
     {
-      "type": "h2",
+      "type": "header",
       "label": "Pre-Match Info",
       "id": "Prematch"
     },
@@ -19,42 +19,52 @@
       "type": "spacer"
     },
     {
-      "type": "h2",
+      "type": "header",
       "label": "Autonomous",
       "id": "Auto"
     },
     {
-      "type": "h3",
+      "type": "subheader",
       "label": "Auto Coral",
       "id": "AutoCoral"
     },
     {
       "type": "counter",
       "label": "Level 1",
-      "id": "autoL1"
+      "id": "autoL1",
+      "allow_negative": false,
+      "variant": "good"
     },
     {
       "type": "counter",
       "label": "Level 2",
-      "id": "autoL2"
+      "id": "autoL2",
+      "allow_negative": false,
+      "variant": "good"
     },
     {
       "type": "counter",
       "label": "Level 3",
-      "id": "autoL3"
+      "id": "autoL3",
+      "allow_negative": false,
+      "variant": "good"
     },
     {
       "type": "counter",
       "label": "Level 4",
-      "id": "autoL4"
+      "id": "autoL4",
+      "allow_negative": false,
+      "variant": "good"
     },
     {
       "type": "counter",
       "label": "Missed Coral in Auto",
-      "id": "autoMiss"
+      "id": "autoMiss",
+      "allow_negative": false,
+      "variant": "bad"
     },
     {
-      "type": "h3",
+      "type": "subheader",
       "label": "Auto Algae",
       "id": "AutoAlgae"
     },
@@ -72,12 +82,12 @@
       "type": "spacer"
     },
     {
-      "type": "h2",
+      "type": "header",
       "label": "Teleop",
       "id": "Teleop"
     },
     {
-      "type": "h3",
+      "type": "subheader",
       "label": "Teleop Coral",
       "id": "TeleopCoral"
     },
@@ -117,7 +127,7 @@
       "id": "teleopMiss"
     },
     {
-      "type": "h3",
+      "type": "subheader",
       "label": "Teleop Algae",
       "id": "TeleopAlgae"
     },
@@ -140,7 +150,7 @@
       "type": "spacer"
     },
     {
-      "type": "h2",
+      "type": "header",
       "label": "Endgame",
       "id": "Endgame"
     },
@@ -159,7 +169,7 @@
       "type": "spacer"
     },
     {
-      "type": "h2",
+      "type": "header",
       "label": "General",
       "id": "General"
     },
@@ -176,7 +186,8 @@
         "min": 0,
         "max": 5,
         "step": 1
-      }
+      },
+      "variant": "standard"
     },
     {
       "type": "textblock",
@@ -185,503 +196,52 @@
     },
     {
       "type": "derived",
-      "operations": [
-        {
-          "operator": "multiply",
-          "operands": [
-            "autoL1",
-            3
-          ],
-          "as": "autoCL1"
-        },
-        {
-          "operator": "multiply",
-          "operands": [
-            "autoL2",
-            4
-          ],
-          "as": "autoCL2"
-        },
-        {
-          "operator": "multiply",
-          "operands": [
-            "autoL3",
-            6
-          ],
-          "as": "autoCL3"
-        },
-        {
-          "operator": "multiply",
-          "operands": [
-            "autoL4",
-            7
-          ],
-          "as": "autoCL4"
-        },
-        {
-          "operator": "multiply",
-          "operands": [
-            "autoProcessor",
-            6
-          ],
-          "as": "autoAProc"
-        },
-        {
-          "operator": "multiply",
-          "operands": [
-            "autoNet",
-            4
-          ],
-          "as": "autoANet"
-        },
-        {
-          "operator": "multiply",
-          "operands": [
-            "teleopL1",
-            2
-          ],
-          "as": "teleopCL1"
-        },
-        {
-          "operator": "multiply",
-          "operands": [
-            "teleopL2",
-            3
-          ],
-          "as": "teleopCL2"
-        },
-        {
-          "operator": "multiply",
-          "operands": [
-            "teleopL3",
-            4
-          ],
-          "as": "teleopCL3"
-        },
-        {
-          "operator": "multiply",
-          "operands": [
-            "teleopL4",
-            5
-          ],
-          "as": "teleopCL4"
-        },
-        {
-          "operator": "multiply",
-          "operands": [
-            "teleopProcessor",
-            6
-          ],
-          "as": "teleopAProc"
-        },
-        {
-          "operator": "multiply",
-          "operands": [
-            "teleopNet",
-            4
-          ],
-          "as": "teleopANet"
-        },
-        {
-          "operator": "multiselect",
-          "id": "endgameBarge",
-          "quantifiers": {
-            "Not Parked": 0,
-            "Parked": 2,
-            "Shallow Cage": 6,
-            "Deep Cage": 12
-          },
-          "as": "endgameBa"
-        },
-        {
-          "operator": "sum",
-          "operands": [
-            "$autoCL1",
-            "$autoCL2",
-            "$autoCL3",
-            "$autoCL4",
-            "$autoAProc",
-            "$autoANet",
-            "$teleopCL1",
-            "$teleopCL2",
-            "$teleopCL3",
-            "$teleopCL4",
-            "$teleopAProc",
-            "$teleopANet",
-            "$endgameBa"
-          ]
-        }
-      ],
-      "display_as": "number",
-      "label": "Total contributed points",
-      "id": "contributedPoints"
-    },
-    {
-      "type": "derived",
-      "operations": [
-        {
-          "operator": "multiply",
-          "operands": [
-            "autoL1",
-            3
-          ],
-          "as": "autoCL1"
-        },
-        {
-          "operator": "multiply",
-          "operands": [
-            "autoL2",
-            4
-          ],
-          "as": "autoCL2"
-        },
-        {
-          "operator": "multiply",
-          "operands": [
-            "autoL3",
-            6
-          ],
-          "as": "autoCL3"
-        },
-        {
-          "operator": "multiply",
-          "operands": [
-            "autoL4",
-            7
-          ],
-          "as": "autoCL4"
-        },
-        {
-          "operator": "multiply",
-          "operands": [
-            "autoProcessor",
-            6
-          ],
-          "as": "autoAProc"
-        },
-        {
-          "operator": "multiply",
-          "operands": [
-            "autoNet",
-            4
-          ],
-          "as": "autoANet"
-        },
-        {
-          "operator": "sum",
-          "operands": [
-            "$autoCL1",
-            "$autoCL2",
-            "$autoCL3",
-            "$autoCL4",
-            "$autoAProc",
-            "$autoANet"
-          ]
-        }
-      ],
-      "display_as": "number",
-      "label": "Total Auton points",
-      "id": "AutonPoints"
-    },
-    {
-      "type": "derived",
-      "operations": [
-        {
-          "operator": "multiply",
-          "operands": [
-            "teleopL1",
-            2
-          ],
-          "as": "teleopCL1"
-        },
-        {
-          "operator": "multiply",
-          "operands": [
-            "teleopL2",
-            3
-          ],
-          "as": "teleopCL2"
-        },
-        {
-          "operator": "multiply",
-          "operands": [
-            "teleopL3",
-            4
-          ],
-          "as": "teleopCL3"
-        },
-        {
-          "operator": "multiply",
-          "operands": [
-            "teleopL4",
-            5
-          ],
-          "as": "teleopCL4"
-        },
-        {
-          "operator": "multiply",
-          "operands": [
-            "teleopProcessor",
-            6
-          ],
-          "as": "teleopAProc"
-        },
-        {
-          "operator": "multiply",
-          "operands": [
-            "teleopNet",
-            4
-          ],
-          "as": "teleopANet"
-        },
-        {
-          "operator": "sum",
-          "operands": [
-            "$teleopCL1",
-            "$teleopCL2",
-            "$teleopCL3",
-            "$teleopCL4",
-            "$teleopAProc",
-            "$teleopANet"
-          ]
-        }
-      ],
-      "display_as": "number",
-      "label": "Total Teleop points",
+      "formula":"teleopL1 * 2 + teleopL2 * 3 + (teleopL3 + teleopNet) * 4 + teleopL4 * 5 + teleopProcessor * 6",
       "id": "TeleopPoints"
     },
     {
       "type": "derived",
-      "operations": [
-        {
-          "operator": "multiply",
-          "operands": [
-            "autoL1",
-            3
-          ],
-          "as": "autoCL1"
-        },
-        {
-          "operator": "multiply",
-          "operands": [
-            "autoL2",
-            4
-          ],
-          "as": "autoCL2"
-        },
-        {
-          "operator": "multiply",
-          "operands": [
-            "autoL3",
-            6
-          ],
-          "as": "autoCL3"
-        },
-        {
-          "operator": "multiply",
-          "operands": [
-            "autoL4",
-            7
-          ],
-          "as": "autoCL4"
-        },
-        {
-          "operator": "multiply",
-          "operands": [
-            "teleopL1",
-            2
-          ],
-          "as": "teleopCL1"
-        },
-        {
-          "operator": "multiply",
-          "operands": [
-            "teleopL2",
-            3
-          ],
-          "as": "teleopCL2"
-        },
-        {
-          "operator": "multiply",
-          "operands": [
-            "teleopL3",
-            4
-          ],
-          "as": "teleopCL3"
-        },
-        {
-          "operator": "multiply",
-          "operands": [
-            "teleopL4",
-            5
-          ],
-          "as": "teleopCL4"
-        },
-        {
-          "operator": "sum",
-          "operands": [
-            "$autoCL1",
-            "$autoCL2",
-            "$autoCL3",
-            "$autoCL4",
-            "$teleopCL1",
-            "$teleopCL2",
-            "$teleopCL3",
-            "$teleopCL4"
-          ]
-        }
-      ],
-      "display_as": "number",
-      "label": "Total Coral points",
-      "id": "CoralPoints"
+      "formula": "autoL1 * 3 + (autoL2 + autoNet) * 4 + (autoL3 + autoProcesser) * 6 + autoL4 * 7",
+      "id": "AutonPoints"
     },
     {
       "type": "derived",
-      "operations": [
-        {
-          "operator": "multiply",
-          "operands": [
-            "autoProcessor",
-            6
-          ],
-          "as": "autoAProc"
-        },
-        {
-          "operator": "multiply",
-          "operands": [
-            "autoNet",
-            4
-          ],
-          "as": "autoANet"
-        },
-        {
-          "operator": "multiply",
-          "operands": [
-            "teleopProcessor",
-            6
-          ],
-          "as": "teleopAProc"
-        },
-        {
-          "operator": "multiply",
-          "operands": [
-            "teleopNet",
-            4
-          ],
-          "as": "teleopANet"
-        },
-        {
-          "operator": "sum",
-          "operands": [
-            "$autoAProc",
-            "$autoANet",
-            "$teleopAProc",
-            "$teleopANet"
-          ]
-        }
-      ],
-      "display_as": "number",
-      "label": "Total Robot Algae points",
-      "id": "AlgaePoints"
-    },
-    {
-      "type": "derived",
-      "operations": [
-        {
-          "operator": "multiselect",
-          "id": "endgameBarge",
-          "quantifiers": {
-            "Not Parked": 0,
-            "Parked": 2,
-            "Shallow Cage": 6,
-            "Deep Cage": 12
-          },
-          "as": "endgameBa"
-        },
-        {
-          "operator": "sum",
-          "operands": [
-            "$endgameBa"
-          ]
-        }
-      ],
-      "display_as": "number",
-      "label": "Total Endgame points",
+      "formula": "multiselect(endgameBarge, 'Not Parked', 0, 'Parked', 2, 'ShallowCage', 6, 'Deep Cage', 12",
       "id": "EndgamePoints"
     },
     {
       "type": "derived",
-      "operations": [
-        {
-          "operator": "sum",
-          "operands": [
-            "autoMiss",
-            "teleopMiss"
-          ]
-        }
-      ],
-      "display_as": "number",
-      "label": "Total Missed Coral",
+      "formula": "TeleopPoints + AutonPoints + EndgamePoints",
+      "id": "contributedPoints"
+    },
+    {
+      "type": "derived",
+      "formula": "teleopL1 * 2 + (teleopL2 + autoL1) * 3 + (teleopL3 + autoL2) * 4 + teleopL4 * 5 + autoL3 * 6 + autoL4 * 7",
+      "id": "CoralPoints"
+    },
+    {
+      "type": "derived",
+      "formula": "(autoNet + teleopNet) * 4 + (autoProcesser + teleopProcessor) * 6",
+      "id": "AlgaePoints"
+    },
+    {
+      "type": "derived",
+      "formula": "autoMiss + teleopMiss",
       "id": "totalMissed"
     },
     {
       "type": "derived",
-      "operations": [
-        {
-          "operator": "sum",
-          "operands": [
-            "autoL1",
-            "autoL2",
-            "autoL3",
-            "autoL4",
-            "teleopL1",
-            "teleopL2",
-            "teleopL3",
-            "teleopL4"
-          ]
-        }
-      ],
-      "display_as": "number",
-      "label": "Total Coral Scored",
+      "formula": "autoL1 + autoL2 + autoL3 + autoL4 + teleopL1 + teleopL2 + teleopL3 + teleopL4",
       "id": "totalCoralScored"
     },
     {
       "type": "derived",
-      "operations": [
-        {
-          "operator": "sum",
-          "operands": [
-            "totalMissed",
-            "totalCoralScored"
-          ],
-          "as": "totalAttempted"
-        },
-        {
-          "operator": "ne",
-          "operands": [
-            "$totalAttempted",
-            0
-          ],
-          "as": "didAttempt"
-        },
-        {
-          "operator": "add",
-          "operands": [
-            "$totalAttempted",
-            "$didAttempt"
-          ],
-          "as": "modifiedAttempted"
-        },
-        {
-          "operator": "divide",
-          "operands": [
-            "totalCoralScored",
-            "$modifiedAttempted"
-          ]
-        }
-      ],
-      "display_as": "number",
-      "label": "Match Weighted Consistency",
+      "formula": "autoNet + teleopNet + autoProcesser + teleopProcessor",
+      "id": "totalAlgaeScored"
+    },
+    {
+      "type": "derived",
+      "formula": "totalScored / if(totalMissed + totalScored == 0, 1, totalMissed + totalScored)",
       "id": "RobotConsistency"
     }
   ]

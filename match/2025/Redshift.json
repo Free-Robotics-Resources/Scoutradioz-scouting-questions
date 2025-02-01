@@ -33,28 +33,28 @@
     "label": "Level 1",
     "id": "autoL1",
     "allow_negative": false,
-    "variant": "good"
+    "variant": "standard"
   },
   {
     "type": "counter",
     "label": "Level 2",
     "id": "autoL2",
     "allow_negative": false,
-    "variant": "good"
+    "variant": "standard"
   },
   {
     "type": "counter",
     "label": "Level 3",
     "id": "autoL3",
     "allow_negative": false,
-    "variant": "good"
+    "variant": "standard"
   },
   {
     "type": "counter",
     "label": "Level 4",
     "id": "autoL4",
     "allow_negative": false,
-    "variant": "good"
+    "variant": "standard"
   },
   {
     "type": "counter",
@@ -73,14 +73,14 @@
     "label": "Processor",
     "id": "autoProcessor",
     "allow_negative": false,
-    "variant": "good"
+    "variant": "standard"
   },
   {
     "type": "counter",
     "label": "Net",
     "id": "autoNet",
     "allow_negative": false,
-    "variant": "good"
+    "variant": "standard"
   },
   {
     "type": "spacer"
@@ -110,28 +110,28 @@
     "label": "Level 1",
     "id": "teleopL1",
     "allow_negative": false,
-    "variant": "good"
+    "variant": "standard"
   },
   {
     "type": "counter",
     "label": "Level 2",
     "id": "teleopL2",
     "allow_negative": false,
-    "variant": "good"
+    "variant": "standard"
   },
   {
     "type": "counter",
     "label": "Level 3",
     "id": "teleopL3",
     "allow_negative": false,
-    "variant": "good"
+    "variant": "standard"
   },
   {
     "type": "counter",
     "label": "Level 4",
     "id": "teleopL4",
     "allow_negative": false,
-    "variant": "good"
+    "variant": "standard"
   },
   {
     "type": "counter",
@@ -155,14 +155,14 @@
     "label": "Algae Scored in Processor",
     "id": "teleopProcessor",
     "allow_negative": false,
-    "variant": "good"
+    "variant": "standard"
   },
   {
     "type": "counter",
     "label": "Algae ROBOT Scored in Net",
     "id": "teleopNet",
     "allow_negative": false,
-    "variant": "good"
+    "variant": "standard"
   },
   {
     "type": "spacer"
@@ -219,12 +219,12 @@
   },
   {
     "type": "derived",
-    "formula": "autoL1 * 3 + (autoL2 + autoNet) * 4 + (autoL3 + autoProcesser) * 6 + autoL4 * 7",
+    "formula": "autoL1 * 3 + (autoL2 + autoNet) * 4 + (autoL3 + autoProcessor) * 6 + autoL4 * 7",
     "id": "AutonPoints"
   },
   {
     "type": "derived",
-    "formula": "multiselect(endgameBarge, 'Not Parked', 0, 'Parked', 2, 'ShallowCage', 6, 'Deep Cage', 12",
+    "formula": "multiselect(endgameBarge, 'Not Parked', 0, 'Parked', 2, 'ShallowCage', 6, 'Deep Cage', 12)",
     "id": "EndgamePoints"
   },
   {
@@ -239,7 +239,7 @@
   },
   {
     "type": "derived",
-    "formula": "(autoNet + teleopNet) * 4 + (autoProcesser + teleopProcessor) * 6",
+    "formula": "(autoNet + teleopNet) * 4 + (autoProcessor + teleopProcessor) * 6",
     "id": "AlgaePoints"
   },
   {
@@ -254,12 +254,12 @@
   },
   {
     "type": "derived",
-    "formula": "autoNet + teleopNet + autoProcesser + teleopProcessor",
+    "formula": "autoNet + teleopNet + autoProcessor + teleopProcessor",
     "id": "totalAlgaeScored"
   },
   {
     "type": "derived",
-    "formula": "totalScored / if(totalMissed + totalScored == 0, 1, totalMissed + totalScored)",
+    "formula": "totalCoralScored / if(totalMissed + totalCoralScored, 1, totalMissed + totalCoralScored)",
     "id": "RobotConsistency"
   }
 ]

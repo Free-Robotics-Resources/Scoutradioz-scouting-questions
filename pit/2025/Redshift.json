@@ -1,6 +1,6 @@
 [
     {
-        "type": "h2",
+        "type": "header",
         "label": "Drive Base",
         "id": "driveBase"
     },
@@ -31,7 +31,8 @@
             "min": 20,
             "max": 40,
             "step": 1
-        }
+        },
+        "variant": "standard"
     },
     {
         "type": "slider",
@@ -41,10 +42,11 @@
             "min": 20,
             "max": 40,
             "step": 1
-        }
+        },
+        "variant": "standard"
     },
     {
-        "type": "h2",
+        "type": "header",
         "label": "Scoring",
         "id": "scoring"
     },
@@ -82,8 +84,8 @@
         "id": "L4"
     },
     {
-        "type": "1st Preferred Level",
-        "label": "Drive base type",
+        "type": "multiselect",
+        "label": "1st Preferred Level",
         "options": [
             "L4",
             "L3",
@@ -94,8 +96,8 @@
         "id": "1stPreference"
     },
     {
-        "type": "2nd Preferred Level",
-        "label": "Drive base type",
+        "type": "multiselect",
+        "label": "2nd Preferred Level",
         "options": [
             "L4",
             "L3",
@@ -106,8 +108,8 @@
         "id": "2ndPreference"
     },
     {
-        "type": "3rd Preferred Level",
-        "label": "Drive base type",
+        "type": "multiselect",
+        "label": "3rd Preferred Level",
         "options": [
             "L4",
             "L3",
@@ -138,7 +140,7 @@
         "id": "AlgaeNet"
     },
     {
-        "type": "h3",
+        "type": "header",
         "label": "Cage",
         "id": "Cage"
     },
@@ -156,7 +158,7 @@
         "id": "climbDeep"
     },
     {
-        "type": "h2",
+        "type": "header",
         "label": "Auto",
         "id": "AutoTitlte"
     },
@@ -164,7 +166,7 @@
         "type": "spacer"
     },
     {
-        "type": "Checkbox",
+        "type": "header",
         "label": "Autonomous Runs",
         "id": "autoRuns"
     },
@@ -189,7 +191,7 @@
         "id": "autoRunNotes"
     },
     {
-        "type": "h2",
+        "type": "header",
         "label": "Comment Section",
         "id": "lblcomment"
     },

@@ -71,12 +71,16 @@
     {
       "type": "counter",
       "label": "Processor",
-      "id": "autoProcessor"
+      "id": "autoProcessor",
+      "allow_negative": false,
+      "variant": "good"
     },
     {
       "type": "counter",
       "label": "Net",
-      "id": "autoNet"
+      "id": "autoNet",
+      "allow_negative": false,
+      "variant": "good"
     },
     {
       "type": "spacer"
@@ -104,27 +108,37 @@
     {
       "type": "counter",
       "label": "Level 1",
-      "id": "teleopL1"
+      "id": "teleopL1",
+      "allow_negative": false,
+      "variant": "good"
     },
     {
       "type": "counter",
       "label": "Level 2",
-      "id": "teleopL2"
+      "id": "teleopL2",
+      "allow_negative": false,
+      "variant": "good"
     },
     {
       "type": "counter",
       "label": "Level 3",
-      "id": "teleopL3"
+      "id": "teleopL3",
+      "allow_negative": false,
+      "variant": "good"
     },
     {
       "type": "counter",
       "label": "Level 4",
-      "id": "teleopL4"
+      "id": "teleopL4",
+      "allow_negative": false,
+      "variant": "good"
     },
     {
       "type": "counter",
       "label": "Missed Coral in Teleop",
-      "id": "teleopMiss"
+      "id": "teleopMiss",
+      "allow_negative": false,
+      "variant": "bad"
     },
     {
       "type": "subheader",
@@ -139,12 +153,16 @@
     {
       "type": "counter",
       "label": "Algae Scored in Processor",
-      "id": "teleopProcessor"
+      "id": "teleopProcessor",
+      "allow_negative": false,
+      "variant": "good"
     },
     {
       "type": "counter",
       "label": "Algae ROBOT Scored in Net",
-      "id": "teleopNet"
+      "id": "teleopNet",
+      "allow_negative": false,
+      "variant": "good"
     },
     {
       "type": "spacer"

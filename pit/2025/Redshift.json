@@ -158,6 +158,16 @@
         "id": "climbDeep"
     },
     {
+        "type": "multiselect",
+        "label": "Preferred Climb",
+        "options": [
+            "Deep",
+            "Shallow",
+            "None"
+        ],
+        "id": "climbPreference"
+    },
+    {
         "type": "header",
         "label": "Auto",
         "id": "AutoTitlte"
@@ -166,23 +176,27 @@
         "type": "spacer"
     },
     {
+        "type": "image",
+        "image_id": "field"
+    },
+    {
         "type": "header",
         "label": "Autonomous Runs",
         "id": "autoRuns"
     },
     {
         "type": "checkbox",
-        "label": "Auto Runs On Friendly Processer Side?",
+        "label": "Auto Runs in AP?",
         "id": "autoFriendSourceRun"
     },
     {
         "type": "checkbox",
-        "label": "Auto Runs In Middle?",
+        "label": "Auto Runs in M?",
         "id": "autoMiddleRun"
     },
     {
         "type": "checkbox",
-        "label": "Auto Runs On Oponent Processer Side?",
+        "label": "Auto Runs in OP?",
         "id": "autoOpponentSourceRun"
     },
     {

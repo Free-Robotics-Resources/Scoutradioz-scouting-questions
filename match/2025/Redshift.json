@@ -5,13 +5,17 @@
     "id": "Prematch"
   },
   {
+    "type": "image",
+    "image_id": "fieldTrident"
+},
+  {
     "type": "multiselect",
     "label": "Starting Position",
     "options": [
       "Not Present",
-      "Processor Side",
-      "Middle",
-      "Other Side"
+      "AP",
+      "M",
+      "OP"
     ],
     "id": "preMatchStart"
   },

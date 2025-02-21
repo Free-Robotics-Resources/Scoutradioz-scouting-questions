@@ -122,27 +122,27 @@
     {
         "type": "checkbox",
         "label": "Remove Algae from Reef?",
-        "id": "AlgaeReef"
+        "id": "algaeReef"
     },
     {
         "type": "checkbox",
         "label": "Pickup Algae?",
-        "id": "AlgaeIntake"
+        "id": "algaeIntake"
     },
     {
         "type": "checkbox",
         "label": "Score Processer?",
-        "id": "AlgaeProcesser"
+        "id": "algaeProcesser"
     },
     {
         "type": "checkbox",
         "label": "Robot Score Net?",
-        "id": "AlgaeNet"
+        "id": "algaeNet"
     },
     {
         "type": "header",
         "label": "Cage",
-        "id": "Cage"
+        "id": "cage"
     },
     {
         "type": "spacer"
@@ -170,7 +170,7 @@
     {
         "type": "header",
         "label": "Auto",
-        "id": "AutoTitlte"
+        "id": "autoTitlte"
     },
     {
         "type": "spacer"

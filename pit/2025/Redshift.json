@@ -47,6 +47,34 @@
     },
     {
         "type": "header",
+        "label": "Intaking",
+        "id": "intake"
+    },
+    {
+        "type": "spacer"
+    },
+    {
+        "type": "checkbox",
+        "label": "Can they intake Coral from the Source?",
+        "id": "pickUpSource"
+    },
+    {
+        "type": "checkbox",
+        "label": "Can they intake Coral from the Ground?",
+        "id": "pickUpGround"
+    },
+    {
+        "type": "checkbox",
+        "label": "Can they Remove Algae from Reef?",
+        "id": "algaeReef"
+    },
+    {
+        "type": "checkbox",
+        "label": "Can They Pickup Algae?",
+        "id": "algaeIntake"
+    },
+    {
+        "type": "header",
         "label": "Scoring",
         "id": "scoring"
     },
@@ -55,32 +83,22 @@
     },
     {
         "type": "checkbox",
-        "label": "Coral from the Source?",
-        "id": "pickUpSource"
-    },
-    {
-        "type": "checkbox",
-        "label": "Coral from the Ground?",
-        "id": "pickUpGround"
-    },
-    {
-        "type": "checkbox",
-        "label": "L1",
+        "label": "Can they score L1?",
         "id": "L1"
     },
     {
         "type": "checkbox",
-        "label": "L2",
+        "label": "Can they score L2?",
         "id": "L2"
     },
     {
         "type": "checkbox",
-        "label": "L3",
+        "label": "Can they score L3?",
         "id": "L3"
     },
     {
         "type": "checkbox",
-        "label": "L4",
+        "label": "Can they score L4?",
         "id": "L4"
     },
     {
@@ -121,22 +139,12 @@
     },
     {
         "type": "checkbox",
-        "label": "Remove Algae from Reef?",
-        "id": "algaeReef"
-    },
-    {
-        "type": "checkbox",
-        "label": "Pickup Algae?",
-        "id": "algaeIntake"
-    },
-    {
-        "type": "checkbox",
-        "label": "Score Processer?",
+        "label": "Can they Score Processer?",
         "id": "algaeProcesser"
     },
     {
         "type": "checkbox",
-        "label": "Robot Score Net?",
+        "label": "Can their Robot Score Net?",
         "id": "algaeNet"
     },
     {

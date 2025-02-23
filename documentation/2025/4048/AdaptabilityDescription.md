@@ -1,3 +1,13 @@
-# One Hash
+# Adaptability Rating
 
-## Two Hash
+## 0
+
+## 1
+
+## 2
+
+## 3
+
+## 4
+
+## 5

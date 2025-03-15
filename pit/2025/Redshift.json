@@ -103,39 +103,15 @@
     },
     {
         "type": "multiselect",
-        "label": "1st Preferred Level",
+        "label": "Preferred Level",
         "options": [
+            "None",
             "L4",
             "L3",
             "L2",
-            "L1",
-            "None"
+            "L1"
         ],
         "id": "1stPreference"
-    },
-    {
-        "type": "multiselect",
-        "label": "2nd Preferred Level",
-        "options": [
-            "L4",
-            "L3",
-            "L2",
-            "L1",
-            "None"
-        ],
-        "id": "2ndPreference"
-    },
-    {
-        "type": "multiselect",
-        "label": "3rd Preferred Level",
-        "options": [
-            "L4",
-            "L3",
-            "L2",
-            "L1",
-            "None"
-        ],
-        "id": "3rdPreference"
     },
     {
         "type": "checkbox",
@@ -211,6 +187,16 @@
         "type": "textblock",
         "label": "Auto Run Plays (List what they can do in auto)",
         "id": "autoRunNotes"
+    },
+    {
+        "type": "header",
+        "label": "Drive Team",
+        "id": "driveTeam"
+    },
+    {
+        "type": "textblock",
+        "label": "How experienced is their Drive Team with their current robot? Please Elaborate.",
+        "id": "driveExperience"
     },
     {
         "type": "header",

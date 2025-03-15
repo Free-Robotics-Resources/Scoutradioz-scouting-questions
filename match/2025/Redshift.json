@@ -1,8 +1,7 @@
 [
   {
     "type": "header",
-    "label": "Pre-Match Info",
-    "id": "Prematch"
+    "label": "Pre-Match Info"
   },
   {
     "type": "image",
@@ -24,53 +23,43 @@
   },
   {
     "type": "header",
-    "label": "Autonomous",
-    "id": "Auto"
+    "label": "Autonomous"
   },
   {
     "type": "subheader",
-    "label": "Auto Coral",
-    "id": "AutoCoral"
+    "label": "Auto Coral"
   },
   {
     "type": "counter",
     "label": "Level 1",
     "id": "autoL1",
-    "allow_negative": false,
+    "allow_negative": true,
     "variant": "standard"
   },
   {
     "type": "counter",
     "label": "Level 2",
     "id": "autoL2",
-    "allow_negative": false,
+    "allow_negative": true,
     "variant": "standard"
   },
   {
     "type": "counter",
     "label": "Level 3",
     "id": "autoL3",
-    "allow_negative": false,
+    "allow_negative": true,
     "variant": "standard"
   },
   {
     "type": "counter",
     "label": "Level 4",
     "id": "autoL4",
-    "allow_negative": false,
+    "allow_negative": true,
     "variant": "standard"
   },
   {
-    "type": "counter",
-    "label": "Missed Coral in Auto",
-    "id": "autoMiss",
-    "allow_negative": false,
-    "variant": "bad"
-  },
-  {
     "type": "subheader",
-    "label": "Auto Algae",
-    "id": "AutoAlgae"
+    "label": "Auto Algae"
   },
   {
     "type": "counter",
@@ -91,13 +80,11 @@
   },
   {
     "type": "header",
-    "label": "Teleop",
-    "id": "Teleop"
+    "label": "Teleop"
   },
   {
     "type": "subheader",
-    "label": "Teleop Coral",
-    "id": "TeleopCoral"
+    "label": "Teleop Coral"
   },
   {
     "type": "checkbox",
@@ -106,48 +93,40 @@
   },
   {
     "type": "checkbox",
-    "label": "Did they pick up Coral off the ground?",
+    "label": "Did they pick up Coral off the Ground?",
     "id": "teleopFloor"
   },
   {
     "type": "counter",
     "label": "Level 1",
     "id": "teleopL1",
-    "allow_negative": false,
+    "allow_negative": true,
     "variant": "standard"
   },
   {
     "type": "counter",
     "label": "Level 2",
     "id": "teleopL2",
-    "allow_negative": false,
+    "allow_negative": true,
     "variant": "standard"
   },
   {
     "type": "counter",
     "label": "Level 3",
     "id": "teleopL3",
-    "allow_negative": false,
+    "allow_negative": true,
     "variant": "standard"
   },
   {
     "type": "counter",
     "label": "Level 4",
     "id": "teleopL4",
-    "allow_negative": false,
+    "allow_negative": true,
     "variant": "standard"
   },
   {
-    "type": "counter",
-    "label": "Missed Coral in Teleop",
-    "id": "teleopMiss",
-    "allow_negative": false,
-    "variant": "bad"
-  },
-  {
     "type": "subheader",
-    "label": "Teleop Algae",
-    "id": "TeleopAlgae"
+    "label": "Teleop Algae"
   },
   {
     "type": "checkbox",
@@ -173,8 +152,7 @@
   },
   {
     "type": "header",
-    "label": "Endgame",
-    "id": "Endgame"
+    "label": "Endgame"
   },
   {
     "type": "multiselect",
@@ -192,24 +170,12 @@
   },
   {
     "type": "header",
-    "label": "General",
-    "id": "General"
+    "label": "General"
   },
   {
     "type": "checkbox",
     "label": "Did they play defense?",
     "id": "otherDefense"
-  },
-  {
-    "type": "slider",
-    "label": "Robot Adaptability Rating?",
-    "id": "otherAdaptability",
-    "options": {
-      "min": 0,
-      "max": 5,
-      "step": 1
-    },
-    "variant": "standard"
   },
   {
     "type": "textblock",
@@ -218,7 +184,7 @@
   },
   {
     "type": "derived",
-    "formula":"teleopL1 * 2 + teleopL2 * 3 + (teleopL3 + teleopNet) * 4 + teleopL4 * 5 + teleopProcessor * 6",
+    "formula":"teleopL1 * 2 + teleopL2 * 3 + (teleopL3 + teleopNet) * 4 + teleopL4 * 5 + teleopProcessor * 2",
     "id": "TeleopPoints"
   },
   {
@@ -248,11 +214,6 @@
   },
   {
     "type": "derived",
-    "formula": "autoMiss + teleopMiss",
-    "id": "totalMissed"
-  },
-  {
-    "type": "derived",
     "formula": "autoL1 + autoL2 + autoL3 + autoL4 + teleopL1 + teleopL2 + teleopL3 + teleopL4",
     "id": "totalCoralScored"
   },
@@ -260,10 +221,5 @@
     "type": "derived",
     "formula": "autoNet + teleopNet + autoProcessor + teleopProcessor",
     "id": "totalAlgaeScored"
-  },
-  {
-    "type": "derived",
-    "formula": "totalCoralScored / if(totalMissed + totalCoralScored, 1, totalMissed + totalCoralScored)",
-    "id": "RobotConsistency"
   }
 ]
